@@ -1,6 +1,8 @@
 # Concepts
 
 * NLP
+* NN () 神经网络
+* CNN () 卷积神经网络
 * RNN - Recurrent Neural Networks
 * GRU (Gated Recurrent Units) 门控循环单元
 * LSTM (Long Short Term Memory networks) 长短时记忆网络
