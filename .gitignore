@@ -1,1 +1,3 @@
 practices/plot-trend/venv
+practices/plot-trend/__pycache__
+*.csv

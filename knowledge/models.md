@@ -1,13 +1,33 @@
 # Concepts
 
-* NLP
-* NN () 神经网络
-* CNN () 卷积神经网络
-* RNN - Recurrent Neural Networks
-* GRU (Gated Recurrent Units) 门控循环单元
-* LSTM (Long Short Term Memory networks) 长短时记忆网络
+AI (Artificial Intelligence) 
 
-## w/ PyTorch
+https://en.wikipedia.org/wiki/Artificial_intelligence
+
+## Reasoning, problem solving
+
+## Knowledge representation
+
+* https://en.wikipedia.org/wiki/Commonsense_knowledge_(artificial_intelligence)
+* https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning
+
+## Planning
+
+https://en.wikipedia.org/wiki/Automated_planning_and_scheduling
+
+## Machine Learning
+
+* https://en.wikipedia.org/wiki/Machine_learning
+
+* CNN (Convolutional_neural_network) 卷积神经网络 https://en.wikipedia.org/wiki/Convolutional_neural_network
+* RNN (Recurrent Neural Networks)
+** LSTM (Long Short Term Memory networks) 长短时记忆网络
+* DNN (Deep Neural Networks)
+* DBN (Deep Belief Networks)
+
+* GRU (Gated Recurrent Units) 门控循环单元
+
+### PyTorch
 
 ```
 # 2019
@@ -18,7 +38,7 @@ PyTorch提供2种不同层次的类别（class）用于构建循环网络：
 * 构建一个双向RNN非常简单，只需在多层次类别中将双向实参设置为True就可以了。
 ```
 
-## w/ TensorFlow
+### TensorFlow
 
 ```
 # 2019
@@ -28,7 +48,7 @@ TensorFlow提供tf.nn.rnn_cell模块用于构建标准RNN。 tf.nn.rnn_cell模�
 * 随机失活包装类别（DropoutWrapper class）：用于执行dropout正则化。
 ```
 
-## w/ Keras
+### Keras
 
 ```
 # 2019
@@ -40,7 +60,30 @@ TensorFlow、PyTorch和Keras都具有构建常见RNN架构的内置功能。它�
 Keras的接口非常简单，包含一小串定义明确的参数，能够使上述类别的执行更加简单。作为一个能够在TensorFlow上运行的高级API，Keras使得TensorFlow更加简单。TensorFlow和PyTorch两者的灵活性差不多，但是后者的接口更加简洁明了。
 ```
 
-## Community 社区
+## NLP (Natural language processing)
+
+https://en.wikipedia.org/wiki/Natural_language_processing
+
+## Perception
+
+* https://en.wikipedia.org/wiki/Machine_perception
+* https://en.wikipedia.org/wiki/Computer_vision
+* https://en.wikipedia.org/wiki/Speech_recognition
+
+## Motion and manipulation
+
+* https://en.wikipedia.org/wiki/Robotics
+
+## Social intelligence
+
+* https://en.wikipedia.org/wiki/Affective_computing
+
+## General intelligence
+
+* https://en.wikipedia.org/wiki/Artificial_general_intelligence
+* https://en.wikipedia.org/wiki/AI-complete
+
+# Community 社区
 
 ```
 # 2019
@@ -54,3 +97,4 @@ Keras的接口非常简单，包含一小串定义明确的参数，能够使上
 
 * https://zhuanlan.zhihu.com/p/84674849
 * https://www.zhihu.com/question/59274399
+

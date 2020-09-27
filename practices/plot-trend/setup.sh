@@ -13,7 +13,5 @@ python -V
 pip install --upgrade pip
 
 # setup (w/ upgrade)
-pip install --upgrade pandas
-pip install --upgrade pandas_datareader
-pip install --upgrade matplotlib
-
+pip install --upgrade pandas pandas_datareader matplotlib tushare
+pip install --upgrade mplfinance
