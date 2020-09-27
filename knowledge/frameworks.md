@@ -1,3 +1,8 @@
+# Comparison
+
+https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software
+
+
 # TensorFlow
 
 * Official web:
@@ -14,6 +19,10 @@ TensorFlow主要支持静态计算图的形式，计算图的结构比较直观�
 
 ```
 
+* https://github.com/tensorflow/tfjs-core
+* https://github.com/tensorflow/tfjs
+* https://github.com/chaosmail/deeplearnjs-caffe
+
 # Keras
 
 ```
@@ -21,9 +30,9 @@ Keras是一个用Python编写的开源神经网络库，它能够在TensorFlow�
 Keras是基于多个不同框架的高级API，可以快速的进行模型的设计和建立，同时支持序贯和函数式两种设计模型方式，可以快速的将想法变为结果，但是由于高度封装的原因，对于已有模型的修改可能不是那么灵活。 
 ```
 
-# MXNet
+# Apache MXNet
 
-* Leading Authors: Baidu
+* Leading Authors: Intel, Baidu, Microsoft, Wolfram Research, etc
 * Lang: Python/C++/R/...
 
 ```
