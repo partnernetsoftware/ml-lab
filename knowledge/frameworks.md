@@ -63,6 +63,20 @@ Yangqing Jia created the project during his PhD at UC Berkeley.
 Caffe is released under the BSD 2-Clause license.
 ```
 
+Quick tiny example (TODO)
+
+```
+# @ref https://zhuanlan.zhihu.com/p/24087905
+caffe.set_mode_cpu() # CPU
+caffe.set_device(0) # GPU
+caffe.set_mode_gpu()
+net = caffe.Net('conv.prototxt', caffe.TEST) #load network proto
+net.blobs #for input data and its propagation in the layers 
+net.params #a vector of blobs for weight and bias parameters
+net.forward() # forward broadcasting
+net.save('mymodel.caffemodel')
+```
+
 ## google scholar citations
 
 https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=-ltRSM0AAAAJ:u5HHmVD_uO8C

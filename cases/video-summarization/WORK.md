@@ -29,6 +29,7 @@ sudo systemctl restart docker
 
 ## check whether docker using GPU now (Q: check where?)
 
+#sudo docker run --gpus all --rm nvidia/cuda nvidia-smi
 sudo docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 
 ## pull caffe image (Q: who is wzj751127122? and where find him for future update? A: https://blog.csdn.net/a751127122 ?)
@@ -84,11 +85,24 @@ pip install sklearn -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mi
 
 ```
 
+run in docker mode
+
+```
+cd /home/ubuntu/py/Video-Summarization/VS-Python/
+docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 bash
+
+
+```
+
+
+
 ## setup tensorflow
 
 ```
+alias pipinstall="pip install -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com"
 source venv/bin/activate
 pip install tensorflow -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+python -c "import tensorflow; print(tensorflow.__version__)"
 
 ```
 # References
