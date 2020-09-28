@@ -12,25 +12,26 @@ https://github.com/tanveer-hussain/Video-Summarization
 
 # setup
 
-## nvidia w/ GPU
+## install nvidia w/ GPU
 
 https://github.com/NVIDIA/nvidia-docker
 
 ```
 steps (notes)
 
-distribution=$(/etc/os-release;echo$ID$VERSION_ID)
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+echo $distribution
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
 ```
 
-# which whether docker using GPU now (Q: check where?)
+## check whether docker using GPU now (Q: check where?)
 
 sudo docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 
-# pull caffe image (Q: who is wzj751127122? and where find him for future update? A: https://blog.csdn.net/a751127122 ?)
+## pull caffe image (Q: who is wzj751127122? and where find him for future update? A: https://blog.csdn.net/a751127122 ?)
 
 * https://hub.docker.com/r/wzj751127122/caffe
 
@@ -41,6 +42,37 @@ sudo docker pull wzj751127122/caffe:19.12-py3
 
 # Dockerfile
 https://hub.docker.com/layers/wzj751127122/caffe/19.11-py3/images/sha256-8765cd0f5e72aff383abbaffd79f3fa845bd8b0299977c94a944872a3b2a11cd?context=explore
+
+```
+
+## ffmpeg
+
+```
+sudo apt install ffmpeg
+```
+
+## python
+
+```
+# make sure env in linux...
+sudo apt install -y cmake
+sudo apt install -y python3-pip
+
+python3 -m venv venv
+source venv/bin/activate
+
+python -V
+pip -V
+
+pip install scikit-build
+
+# opencv for python
+# CDN # pip --default-timeout=100 install opencv-python -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+pip install opencv-python
+
+# sklearn
+# CDN # pip --default-timeout=100 install sklearn -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+pip install sklearn
 
 ```
 
