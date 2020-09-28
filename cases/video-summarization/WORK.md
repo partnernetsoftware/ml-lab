@@ -54,28 +54,43 @@ sudo apt install ffmpeg
 ## python
 
 ```
-# make sure env in linux...
-sudo apt install -y cmake
+# ubuntu 
+## install pip3
 sudo apt install -y python3-pip
+## some depends
+sudo apt install -y cmake
 
+#
 python3 -m venv venv
 source venv/bin/activate
-
 python -V
 pip -V
 
-pip install scikit-build
+# update pip it self
+pip -V && pip install --upgrade pip && pip -V
+
+# pip install scikit-build
+pip install scikit-build -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 # opencv for python
 # CDN # pip --default-timeout=100 install opencv-python -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
-pip install opencv-python
+# pip install opencv-python
+pip install opencv-python -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 # sklearn
 # CDN # pip --default-timeout=100 install sklearn -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
-pip install sklearn
+# pip install sklearn
+pip install sklearn -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 ```
 
+## setup tensorflow
+
+```
+source venv/bin/activate
+pip install tensorflow -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+
+```
 # References
 
 * https://github.com/tanveer-hussain/DeepRes-Video-Summarization
