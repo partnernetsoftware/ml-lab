@@ -46,10 +46,37 @@ https://hub.docker.com/layers/wzj751127122/caffe/19.11-py3/images/sha256-8765cd0
 
 ```
 
+# run in docker mode
+
+```
+cd /home/ubuntu/py/Video-Summarization/VS-Python/
+sudo docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 python -V
+sudo docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 pip -V
+sudo docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 pip list
+sudo docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 bash
+
+
+```
+
+# ext from the docker 
+
+sudo docker build . -t szubdi/caffe:latest
+
+```
+sudo docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 bash
+	apt update
+	apt install -y python3-venv
+	python3 -m venv venv
+	source venv/bin/activate
+	python -V
+	pip -V
+
+```
+
 ## ffmpeg
 
 ```
-sudo apt install ffmpeg
+sudo apt install -y ffmpeg
 ```
 
 ## python
@@ -58,17 +85,23 @@ sudo apt install ffmpeg
 # ubuntu 
 ## install pip3
 sudo apt install -y python3-pip
+
 ## some depends
 sudo apt install -y cmake
 
-#
+# venv
+## sudo
+apt-get install -y python3-venv
 python3 -m venv venv
+
 source venv/bin/activate
 python -V
 pip -V
 
-# update pip it self
-pip -V && pip install --upgrade pip && pip -V
+# # update pip it self
+# ## pip -V && pip install --upgrade pip && pip -V
+# pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+# pip -V
 
 # pip install scikit-build
 pip install scikit-build -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
@@ -83,14 +116,8 @@ pip install opencv-python -i https://mirrors.aliyun.com/pypi/simple/ --trusted-h
 # pip install sklearn
 pip install sklearn -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
-```
-
-run in docker mode
-
-```
-cd /home/ubuntu/py/Video-Summarization/VS-Python/
-docker run -ti --gpus=all -v $PWD:/root/mypy -w /root/mypy wzj751127122/caffe:19.12-py3 bash
-
+# check py libs 
+pip list
 
 ```
 
