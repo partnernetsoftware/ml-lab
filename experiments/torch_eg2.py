@@ -72,6 +72,7 @@ class TextCNN(nn.Module):
             print("Loading pretrain embedding...")
             self.embedding.weight.data.copy_(torch.from_numpy(np.load(config.embedding_path)))    
     
+# https://blog.csdn.net/sunny_xsc1994/article/details/82969867?spm=a2c4e.10696291.0.0.275e19a4I3QyAU
     def forward(self, x):
         embed_x = self.embedding(x)
         
