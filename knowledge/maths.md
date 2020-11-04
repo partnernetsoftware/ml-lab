@@ -8,3 +8,5 @@
 ```
 
 * tensor with numpy https://lgwangh.github.io/2018/04/18/%E5%BC%A0%E9%87%8F%E5%9F%BA%E7%A1%80/
+* 用sympy.diffgeom查找黎曼曲率张量 https://www.coder.work/article/5024474
+
