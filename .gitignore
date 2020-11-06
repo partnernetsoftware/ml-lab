@@ -3,3 +3,4 @@ __pycache__
 *.csv
 .ipynb_checkpoints
 nohup.out
+*.swp
