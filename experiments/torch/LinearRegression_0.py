@@ -12,11 +12,22 @@ class main(mytorch):
         return self.linear(x)
 
 if __name__ == '__main__':
-    _cuda = torch.cuda.is_available
+
+    _cuda = torch.cuda.is_available()
+    #_cuda = False
+
     mod = main()
     if _cuda: mod = mod.cuda()
-    mod = mod.cuda()
+
     x = torch.rand(1)
     if _cuda: x = x.cuda()
+
     rst = mod.forward(x)
     print(x, rst)
+
+    from matplotlib import pyplot as plt
+    if _cuda:
+        plt.plot(x.cpu().numpy(),rst.cpu().detach().numpy(),'ro',label='test')
+    else:
+        plt.plot(x.numpy(),rst.detach().numpy(),'ro',label='test')
+    plt.show()
