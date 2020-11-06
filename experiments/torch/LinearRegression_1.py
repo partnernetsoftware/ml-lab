@@ -65,7 +65,8 @@ if __name__ == '__main__':
         optimizer.zero_grad() # reset grad.
         loss.backward()
         optimizer.step()
-        print('lost.data=',loss.data)
+        #print('lost.data=',loss.data)
+        print('lost.data=',loss.data.item())
         #the_loss = loss.data[0]
         #print(the_loss)
 
